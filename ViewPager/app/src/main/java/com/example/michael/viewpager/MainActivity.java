@@ -13,7 +13,7 @@ import android.util.Log;
 public class MainActivity extends FragmentActivity {
 
     static final String TAG = "myLogs";
-    static final int PAGE_COUNT = 10;
+    static final int PAGE_COUNT = 3;
 
     ViewPager pager;
     PagerAdapter pagerAdapter;
