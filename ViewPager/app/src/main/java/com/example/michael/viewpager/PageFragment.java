@@ -8,6 +8,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class PageFragment extends Fragment {
@@ -40,9 +41,26 @@ public class PageFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment, null);
 
         TextView tvPage = (TextView) view.findViewById(R.id.tvPage);
-        tvPage.setText(getString(R.string.info) + pageNumber);
-        tvPage.setBackgroundColor(backColor);
-
+        //TextView tvPageOne = (TextView) view.findViewById(R.id.tvPageOne);
+        //
+        if(pageNumber==0){
+        ImageView im = (ImageView) view.findViewById(R.id.image_page);
+        im.setImageResource(R.drawable.first);
+            tvPage.setText("Любите свои \n комнатные растения");
+           // tvPage.setBackgroundColor(backColor);
+        }
+        if(pageNumber==1){
+            ImageView im = (ImageView) view.findViewById(R.id.image_page);
+            im.setImageResource(R.drawable.second);
+            tvPage.setText("Заботьтесь о них \n правильно");
+           // tvPage.setBackgroundColor(backColor);
+        }
+        if(pageNumber==2) {
+            ImageView im = (ImageView) view.findViewById(R.id.image_page);
+            im.setImageResource(R.drawable.third);
+            tvPage.setText("Никогда не забывайте \n про них");
+           // tvPage.setBackgroundColor(backColor);
+        }
         return view;
     }
 }

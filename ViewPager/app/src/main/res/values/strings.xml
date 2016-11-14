@@ -1,4 +1,4 @@
 <resources>
     <string name="app_name">ViewPager</string>
-    <string name="info">"Экран ноиер "</string>
+    <string name="info">"Экран номер "</string>
 </resources>
