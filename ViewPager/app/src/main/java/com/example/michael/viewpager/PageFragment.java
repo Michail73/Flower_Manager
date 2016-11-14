@@ -41,7 +41,7 @@ public class PageFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment, null);
 
         TextView tvPage = (TextView) view.findViewById(R.id.tvPage);
-        //TextView tvPageOne = (TextView) view.findViewById(R.id.tvPageOne);
+        TextView tvPageOne = (TextView) view.findViewById(R.id.tvPageOne);
         //
         if(pageNumber==0){
         ImageView im = (ImageView) view.findViewById(R.id.image_page);
@@ -58,7 +58,7 @@ public class PageFragment extends Fragment {
         if(pageNumber==2) {
             ImageView im = (ImageView) view.findViewById(R.id.image_page);
             im.setImageResource(R.drawable.third);
-            tvPage.setText("Никогда не забывайте \n про них");
+            tvPageOne.setText("Никогда не забывайте \n про них");
            // tvPage.setBackgroundColor(backColor);
         }
         return view;
