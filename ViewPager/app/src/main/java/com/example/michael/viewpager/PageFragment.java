@@ -41,24 +41,24 @@ public class PageFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment, null);
 
         TextView tvPage = (TextView) view.findViewById(R.id.tvPage);
-        TextView tvPageOne = (TextView) view.findViewById(R.id.tvPageOne);
+        //TextView tvPageOne = (TextView) view.findViewById(R.id.tvPageOne);
         //
         if(pageNumber==0){
-        ImageView im = (ImageView) view.findViewById(R.id.image_page);
+        ImageView im = (ImageView) view.findViewById(R.id.first);
         im.setImageResource(R.drawable.first);
             tvPage.setText("Любите свои \n комнатные растения");
            // tvPage.setBackgroundColor(backColor);
         }
         if(pageNumber==1){
-            ImageView im = (ImageView) view.findViewById(R.id.image_page);
+            ImageView im = (ImageView) view.findViewById(R.id.second);
             im.setImageResource(R.drawable.second);
             tvPage.setText("Заботьтесь о них \n правильно");
            // tvPage.setBackgroundColor(backColor);
         }
         if(pageNumber==2) {
-            ImageView im = (ImageView) view.findViewById(R.id.image_page);
+            ImageView im = (ImageView) view.findViewById(R.id.third);
             im.setImageResource(R.drawable.third);
-            tvPageOne.setText("Никогда не забывайте \n про них");
+            tvPage.setText("Никогда не забывайте \n про них");
            // tvPage.setBackgroundColor(backColor);
         }
         return view;
