@@ -46,7 +46,7 @@ public class PageFragment extends Fragment {
 
 
             mButton = (Button) view.findViewById(R.id.start);
-            View.OnClickListener OclStartBtn = new View.OnClickListener() {
+        View.OnClickListener OclStartBtn = new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     Intent intent = new Intent(getActivity(), ScrollingActivity.class);
@@ -55,6 +55,7 @@ public class PageFragment extends Fragment {
             };
 
         mButton.setOnClickListener(OclStartBtn);
+
         TextView tvPage = (TextView) view.findViewById(R.id.tvPage);
         //TextView tvPageOne = (TextView) view.findViewById(R.id.tvPageOne);
         //
@@ -77,6 +78,7 @@ public class PageFragment extends Fragment {
             tvPage.setText("Никогда не забывайте \n про них");
 
             mButton.setVisibility(View.VISIBLE);
+
         }
         return view;
     }

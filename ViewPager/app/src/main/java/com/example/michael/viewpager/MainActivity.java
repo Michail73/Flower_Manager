@@ -12,6 +12,7 @@ import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 
 public class MainActivity extends FragmentActivity {
 
@@ -57,6 +58,7 @@ public class MainActivity extends FragmentActivity {
 //        intent.setClass(this, ScrollingActivity.class);
 //        startActivity(intent);
 //    }
+
 
     private class MyFragmentPagerAdapter extends FragmentPagerAdapter {
 
