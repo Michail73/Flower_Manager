@@ -2,12 +2,14 @@ package com.example.michael.viewpager;
 
 import java.util.Random;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -17,7 +19,7 @@ public class PageFragment extends Fragment {
 
     int pageNumber;
     int backColor;
-
+    Button mButton;
     static PageFragment newInstance(int page) {
         PageFragment pageFragment = new PageFragment();
         Bundle arguments = new Bundle();
@@ -33,6 +35,8 @@ public class PageFragment extends Fragment {
 
         Random rnd = new Random();
         backColor = Color.argb(40, rnd.nextInt(256), rnd.nextInt(256), rnd.nextInt(256));
+
+
     }
 
     @Override
@@ -40,6 +44,17 @@ public class PageFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment, null);
 
+
+            mButton = (Button) view.findViewById(R.id.start);
+            View.OnClickListener OclStartBtn = new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(getActivity(), ScrollingActivity.class);
+                    startActivity(intent);
+                }
+            };
+
+        mButton.setOnClickListener(OclStartBtn);
         TextView tvPage = (TextView) view.findViewById(R.id.tvPage);
         //TextView tvPageOne = (TextView) view.findViewById(R.id.tvPageOne);
         //
@@ -47,19 +62,21 @@ public class PageFragment extends Fragment {
         ImageView im = (ImageView) view.findViewById(R.id.first);
         im.setImageResource(R.drawable.first);
             tvPage.setText("Любите свои \n комнатные растения");
-           // tvPage.setBackgroundColor(backColor);
+            mButton.setVisibility(View.GONE);
         }
         if(pageNumber==1){
             ImageView im = (ImageView) view.findViewById(R.id.second);
             im.setImageResource(R.drawable.second);
             tvPage.setText("Заботьтесь о них \n правильно");
-           // tvPage.setBackgroundColor(backColor);
+
+            mButton.setVisibility(View.GONE);
         }
         if(pageNumber==2) {
             ImageView im = (ImageView) view.findViewById(R.id.third);
             im.setImageResource(R.drawable.third);
             tvPage.setText("Никогда не забывайте \n про них");
-           // tvPage.setBackgroundColor(backColor);
+
+            mButton.setVisibility(View.VISIBLE);
         }
         return view;
     }

@@ -1,5 +1,6 @@
 package com.example.michael.viewpager;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -9,6 +10,8 @@ import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 
 public class MainActivity extends FragmentActivity {
 
@@ -22,6 +25,8 @@ public class MainActivity extends FragmentActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
 
         pager = (ViewPager) findViewById(R.id.pager);
         pagerAdapter = new MyFragmentPagerAdapter(getSupportFragmentManager());
@@ -43,7 +48,15 @@ public class MainActivity extends FragmentActivity {
             public void onPageScrollStateChanged(int state) {
             }
         });
+
+
     }
+
+//    public void push(View view) {
+//        Intent intent = new Intent();
+//        intent.setClass(this, ScrollingActivity.class);
+//        startActivity(intent);
+//    }
 
     private class MyFragmentPagerAdapter extends FragmentPagerAdapter {
 
