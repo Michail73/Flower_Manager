@@ -49,7 +49,7 @@ public class PageFragment extends Fragment {
         View.OnClickListener OclStartBtn = new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Intent intent = new Intent(getActivity(), ScrollingActivity.class);
+                    Intent intent = new Intent(getActivity(), Catalog.class);
                     startActivity(intent);
                 }
             };
