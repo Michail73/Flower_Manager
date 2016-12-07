@@ -1,6 +1,7 @@
 package com.example.michael.viewpager;
 
 import android.content.Intent;
+import android.database.SQLException;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -9,6 +10,7 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
+import android.support.v4.widget.SimpleCursorAdapter;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -22,12 +24,18 @@ public class MainActivity extends FragmentActivity {
     ViewPager pager;
     PagerAdapter pagerAdapter;
 
+    DatabaseHelper sqlHelper;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
 
+        Tsvetok t =new Tsvetok();
+        t.setName("Hui");
+        t.setDescription("v rot");
+        DBHelper.getINSTANCE().write(t);
 
         pager = (ViewPager) findViewById(R.id.pager);
         pagerAdapter = new MyFragmentPagerAdapter(getSupportFragmentManager());
@@ -51,13 +59,13 @@ public class MainActivity extends FragmentActivity {
         });
 
 
+        sqlHelper = new DatabaseHelper(getApplicationContext());
+        // создаем базу данных
+        sqlHelper.create_db();
+
     }
 
-//    public void push(View view) {
-//        Intent intent = new Intent();
-//        intent.setClass(this, ScrollingActivity.class);
-//        startActivity(intent);
-//    }
+
 
 
     private class MyFragmentPagerAdapter extends FragmentPagerAdapter {

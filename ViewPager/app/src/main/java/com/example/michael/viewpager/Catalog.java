@@ -17,20 +17,13 @@ public class Catalog extends AppCompatActivity {
         setContentView(R.layout.activity_catalog);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+        getSupportActionBar().setTitle(R.string.cat);
 
         ListView listView = (ListView)findViewById(R.id.listView);
 
         final String[] flowers = new String[]{
-                "Абелиолистник", "Абелия", "Абрикос"
+                "Абелиолистник", "Абелия", "Абрикос", "Абутилон", "Аверроа карамбола", "Авокадо приятнейшее", "Агава американская", "Агава королевы Виктории", "Агапантус", "Аглаонема изменчивая", "Адениум",
+                "Роза", "Лилия", "Клюква", "Хуй в рот"
         };
 
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, flowers);

@@ -57,28 +57,23 @@ public class PageFragment extends Fragment {
         mButton.setOnClickListener(OclStartBtn);
 
         TextView tvPage = (TextView) view.findViewById(R.id.tvPage);
-        //TextView tvPageOne = (TextView) view.findViewById(R.id.tvPageOne);
-        //
-        if(pageNumber==0){
-        ImageView im = (ImageView) view.findViewById(R.id.first);
-        im.setImageResource(R.drawable.first);
-            tvPage.setText("Любите свои \n комнатные растения");
-            mButton.setVisibility(View.GONE);
-        }
-        if(pageNumber==1){
-            ImageView im = (ImageView) view.findViewById(R.id.second);
-            im.setImageResource(R.drawable.second);
-            tvPage.setText("Заботьтесь о них \n правильно");
-
-            mButton.setVisibility(View.GONE);
-        }
-        if(pageNumber==2) {
-            ImageView im = (ImageView) view.findViewById(R.id.third);
-            im.setImageResource(R.drawable.third);
-            tvPage.setText("Никогда не забывайте \n про них");
-
-            mButton.setVisibility(View.VISIBLE);
-
+        ImageView im = (ImageView) view.findViewById(R.id.icon);
+        switch (pageNumber){
+            case 0:
+                tvPage.setText(R.string.first);
+                mButton.setVisibility(View.GONE);
+                im.setImageResource(R.drawable.first);
+                break;
+            case 1:
+                im.setImageResource(R.drawable.second);
+                mButton.setVisibility(View.GONE);
+                tvPage.setText(R.string.sec);
+                break;
+            case 2:
+                im.setImageResource(R.drawable.third);
+                tvPage.setText(R.string.third);
+                mButton.setVisibility(View.VISIBLE);
+                break;
         }
         return view;
     }
