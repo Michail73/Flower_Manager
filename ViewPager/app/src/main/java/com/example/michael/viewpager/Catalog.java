@@ -23,7 +23,7 @@ public class Catalog extends AppCompatActivity {
 
         final String[] flowers = new String[]{
                 "Абелиолистник", "Абелия", "Абрикос", "Абутилон", "Аверроа карамбола", "Авокадо приятнейшее", "Агава американская", "Агава королевы Виктории", "Агапантус", "Аглаонема изменчивая", "Адениум",
-                "Роза", "Лилия", "Клюква", "Хуй в рот"
+                "Роза", "Лилия", "Клюква", "МАРИХУАНА"
         };
 
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, flowers);
