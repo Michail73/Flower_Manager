@@ -1,21 +1,28 @@
 package com.example.michael.viewpager;
 
+import android.app.ListActivity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-
+import android.widget.Toast;
+//public class Catalog extends ListActivity
 public class Catalog extends AppCompatActivity {
 
+    final String LOG_TAG = "myLogs";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_catalog);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle(R.string.cat);
 
@@ -28,7 +35,28 @@ public class Catalog extends AppCompatActivity {
 
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, flowers);
 
-        listView.setAdapter(adapter); 
+        listView.setAdapter(adapter);
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
+
+                    Log.d(LOG_TAG,"itemClick: position = " + position + ", id = "
+                            + id);
+                Intent intent = new Intent(Catalog.this, Aboutflower.class);
+                startActivity(intent);
+            }
+        });
     }
+
+
+
+//    @Override
+//    protected void onListItemClick(ListView l, View v, int position, long id) {
+//        super.onListItemClick(l, v, position, id);
+//        Toast.makeText(getApplicationContext(),
+//                "Вы выбрали " + (position + 1) + " элемент", Toast.LENGTH_SHORT).show();
+//    }
+//
 
 }

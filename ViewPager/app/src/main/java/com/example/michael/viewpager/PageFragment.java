@@ -17,7 +17,7 @@ public class PageFragment extends Fragment {
 
     static final String ARGUMENT_PAGE_NUMBER = "arg_page_number";
 
-    int pageNumber;
+    int pageNumber; // показывает в консоли номер страницы
     int backColor;
     Button mButton;
     static PageFragment newInstance(int page) {
@@ -35,8 +35,6 @@ public class PageFragment extends Fragment {
 
         Random rnd = new Random();
         backColor = Color.argb(40, rnd.nextInt(256), rnd.nextInt(256), rnd.nextInt(256));
-
-
     }
 
     @Override
