@@ -12,8 +12,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.Toast;
-//public class Catalog extends ListActivity
+
 public class Catalog extends AppCompatActivity {
 
     final String LOG_TAG = "myLogs";
@@ -45,6 +44,12 @@ public class Catalog extends AppCompatActivity {
                             + id);
                 Intent intent = new Intent(Catalog.this, Aboutflower.class);
                 startActivity(intent);
+                switch (position){
+                    case (0):
+                        break;
+                    case (1):
+                        break;
+                }
             }
         });
     }
