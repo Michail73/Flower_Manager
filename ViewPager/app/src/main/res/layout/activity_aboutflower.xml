@@ -1,19 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+
+
     android:id="@+id/activity_aboutflower"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.michael.viewpager.Aboutflower">
+ >
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:id="@+id/icon"
-
         />
+
+</RelativeLayout>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bck"
+        android:layout_alignParentBottom="true"
+        />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/water"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/water_text"
+
+        android:textSize="20sp"
+        android:textColor="@color/colorWhite"
+        android:layout_below="@+id/water"
+        />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/sun"
+        android:layout_centerInParent="true"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/sun_text"
+
+        android:textSize="20sp"
+        android:textColor="@color/colorWhite"
+        android:layout_below="@+id/sun"
+        />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/gradusnik"
+        android:layout_alignParentRight="true"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/temperature"
+
+        android:textSize="20sp"
+        android:textColor="@color/colorWhite"
+        android:layout_below="@+id/gradusnik"
+        />
+</RelativeLayout>
+
+
 
 </RelativeLayout>

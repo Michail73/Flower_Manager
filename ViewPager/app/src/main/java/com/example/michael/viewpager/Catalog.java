@@ -20,7 +20,7 @@ public class Catalog extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_catalog);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar); 
 
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle(R.string.cat);
