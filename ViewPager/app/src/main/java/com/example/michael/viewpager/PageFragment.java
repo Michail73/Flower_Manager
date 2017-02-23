@@ -51,7 +51,7 @@ public class PageFragment extends Fragment {
                     startActivity(intent);
                 }
             };
-
+        // comment for same changes :(
         mButton.setOnClickListener(OclStartBtn);
 
         TextView tvPage = (TextView) view.findViewById(R.id.tvPage);
@@ -68,7 +68,7 @@ public class PageFragment extends Fragment {
                 tvPage.setText(R.string.sec);
                 break;
             case 2:
-                im.setImageResource(R.drawable.third);
+                im.setImageResource(R.drawable.tri);
                 tvPage.setText(R.string.third);
                 mButton.setVisibility(View.VISIBLE);
                 break;

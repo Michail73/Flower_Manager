@@ -35,7 +35,7 @@ public class Tsvetok {
     public void setName(String name) {
         this.name = name;
     }
-
+//asdfadsfaf
     public void setVlazhnost(int vlazhnost) {
         this.vlazhnost = vlazhnost;
     }
