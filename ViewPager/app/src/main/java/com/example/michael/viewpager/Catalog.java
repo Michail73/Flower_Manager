@@ -43,6 +43,7 @@ public class Catalog extends AppCompatActivity {
                     Log.d(LOG_TAG,"itemClick: position = " + position + ", id = "
                             + id);
                 Intent intent = new Intent(Catalog.this, Aboutflower.class);
+                intent.putExtra("Title", flowers[position]);
                 startActivity(intent);
                 switch (position){
                     case (0):

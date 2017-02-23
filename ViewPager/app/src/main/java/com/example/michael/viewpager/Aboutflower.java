@@ -18,8 +18,9 @@ public class Aboutflower extends AppCompatActivity {
         setContentView(R.layout.activity_aboutflower);
         //View view = inflater.inflate(R.layout.activity_aboutflower, null);
 
+        String title = getIntent().getStringExtra("Title");
 
-        setTitle("Kekes");
+        setTitle(title);
 
 
         TextView water_text = (TextView) findViewById(R.id.water);
